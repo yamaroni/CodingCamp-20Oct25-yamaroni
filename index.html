@@ -8,18 +8,81 @@
 
     <!-- CSS External File -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
 
     <!-- Header Content -->
-    <header></header>
+    <header class="main-header p-[8px]">
+        <!-- Logo Website -->
+        <div class="main-logo"></div>
+
+        <!-- Navigation Menu -->
+        <nav class="flex gap-1">
+            <a class="border rounded p-2" href="#home-section">Home</a>
+            <a class="border rounded p-2" href="#profile-section">Our Profile</a>
+            <a class="border rounded p-2" href="#portfolio-section">Portfolio</a>
+            <a class="border rounded p-2" href="#message-section">Message Us</a>
+        </nav>
+    </header>
+
+    <hr />
 
     <!-- Main Content -->
-    <main></main>
+    <main>
+        <!-- Home -->
+        <section id="home-section" class="hero-section p-4 min-h-[500px]">
+            <h1 class="text-3xl font-bold mb-4"><span id="greet-name"></span>Welcome to My Portfolio</h1>
+            <p class="text-lg">This is a brief introduction about myself and my work.</p>
+        </section>
+
+        <hr />
+
+        <!-- Our Profile -->
+        <section id="profile-section" class="profile-section p-4 min-h-[500px]">
+            <h2 class="text-2xl font-bold mb-4">Our Profile</h2>
+            <p class="text-lg">Details about my background, skills, and experiences.</p>
+        </section>
+
+        <hr />
+
+        <!-- Portfolio -->
+        <section id="portfolio-section" class="portfolio-section p-4 min-h-[500px]">
+            <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
+            <p class="text-lg">Showcase of my projects and accomplishments.</p>
+        </section>
+
+        <hr />
+
+        <!-- Message Us -->
+        <section id="message-section" class="message-section p-4 min-h-[500px]">
+            <h2 class="text-2xl font-bold mb-4">Message Us</h2>
+            <p class="text-lg">Feel free to reach out for collaborations or inquiries.</p>
+
+            <form>
+                <label for="name" class="block mb-2">Name:</label>
+                <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full" required>
+
+                <label for="email" class="block mb-2">Email:</label>
+                <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full" required>
+
+                <label for="message" class="block mb-2">Message:</label>
+                <textarea id="message-input" name="message" class="border p-2 mb-4 w-full" rows="4" required></textarea>
+            </form>
+
+            <button onclick="validateForm();" class="bg-blue-500 text-white p-2 rounded">Send Message</button>
+        </section>
+    </main>
 
     <!-- Footer Content -->
-    <footer></footer>
+    <footer>
+        <div class="footer-content p-4 text-center">
+            <p class="text-sm">&copy; 2025 Yama's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- Javascript External File -->
     <script src="js/script.js"></script>
